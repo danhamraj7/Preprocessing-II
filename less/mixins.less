@@ -1,1 +1,40 @@
 // Mixins in here
+.center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+
+
+.custom-btn(@button-bg: #17A2B8, @width: 200px, @txtColor: #FFFFFF) {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: @width;
+    height: 45px;
+    background: @button-bg;
+    color: @txtColor;
+    border: 1px solid #C0C0C0;
+    cursor: pointer;
+    font-size: 1.8rem;
+
+    @media @mobile {
+        width: 80%;
+        margin-left: 3%;
+    }
+
+    &:hover {
+        background: @txtColor;
+        color: @button-bg;
+    }
+}

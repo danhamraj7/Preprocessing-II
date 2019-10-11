@@ -1,21 +1,76 @@
 .home {
 
+  .intro {
+    border-bottom: 2px dashed @navigation-border;
+
+    p {
+      margin-bottom: 15px;
+
+      @media @mobile {
+        text-align: left;
+        width: 95.2%;
+        margin-left: 10px
+      }
+    }
+
+    h2 {
+      @media @mobile {
+        margin: 8px 12px;
+      }
+    }
+
+    .busImg {
+      margin: 11% 0 2% 0;
+
+      @media @mobile {
+        max-width: 96%;
+        margin: 18% 1% 2% 2%;
+      }
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
+      @media @mobile {
+        width: 98%;
+      }
+
+      p {
+        @media @mobile {
+          text-align: left;
+          margin-left: 5px;
+        }
+      }
+
+      h2 {
+        @media @mobile {
+          margin-left: 15px;
+        }
+      }
+
+      .img-content {
+        width: 48%;
+        padding-left: 1%;
+
+        @media @mobile {
+          width: 98%;
+          margin-top: 15px;
+        }
+      }
 
       img {
         border-radius: 10px;
@@ -23,9 +78,17 @@
     }
   }
 
+
+
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -36,16 +99,40 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      margin: 0 0 5% 1.8%;
+      width: 96%;
+      align-items: center;
+    }
+
+    @media @mobile {
+      h2 {
+        margin: 2% 4% 0;
+
+      }
+    }
+
+    @media @mobile {
+      p {
+        text-align: left;
+        margin-left: 1.8%;
+        width: 100%
+      }
+    }
+
     img {
       border-radius: 10px;
     }
   }
+
+
 
   .content-pick {
     padding-top: 30px;
@@ -53,9 +140,43 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .signUp {
+        .custom-btn();
+      }
+
+
+      @media @mobile {
+        width: 100%;
+        text-align: left;
+        // border: 1px solid black
+      }
+
+      @media @mobile {
+        h4 {
+          margin: 2% 4% 0;
+
+        }
+      }
+
+      @media @mobile {
+        p {
+          text-align: left;
+          margin-left: 1.8%;
+        }
+      }
+
     }
+
   }
-}// home
+}
+
+// home
