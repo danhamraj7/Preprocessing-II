@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
 html {
@@ -10,6 +13,7 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
 }
+
 
 h1,
 h2,
@@ -37,6 +41,11 @@ p {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
+
+  @media @mobile {
+    text-align: center;
+    margin: 2px;
+  }
 }
 
 img {
@@ -44,8 +53,10 @@ img {
   height: auto;
 }
 
+
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  background: @main-bg;
 }
